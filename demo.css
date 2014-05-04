@@ -1,0 +1,45 @@
+* {
+    margin:0;
+    padding:0;
+    border:0;
+    box-sizing: border-box;
+}
+
+#main {
+    position: absolute;
+    top:0;
+    bottom:0;
+    left: 150px;
+    right: 150px;
+    background-color: whitesmoke;
+    font-family: 'Arial';
+}
+
+h1 {
+    text-align: center;
+    padding: 5px;
+}
+
+.alignment-icons {
+    width: 400px;
+    margin-left: -200px;
+    position: absolute;
+    left: 50%;
+    top: 90px;
+}
+
+.alignment-icons .svgIcon {
+    width: 100px;
+    height: 100px;
+    float:left;
+    background-color: #9999ff;
+}
+.alignment-icons .svgIcon:hover {
+    background-color: #ff9999;
+    cursor: pointer;
+}
+
+.description {
+    margin-top: 200px;
+    padding: 30px;
+}

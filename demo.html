@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVG Icons Loader demo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="SVGIconsLoader.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="demo.css">
+        
+        <script>
+            $(document).ready(function() {
+                var iconsLoader = SVGIconsLoader("alignIcons.svg");
+            });
+        </script>
+    </head>
+    <body>
+        <div id="main">
+            <h1>SVG Icon Loader DEMO</h1>
+            <div class="alignment-icons">
+                <div title="Align left" class="svgIcon" data-svgicon-id="align-left"></div>
+                <div title="Align center" class="svgIcon" data-svgicon-id="align-center"></div>
+                <div title="Align right" class="svgIcon" data-svgicon-id="align-right"></div>
+                <div title="Justify" class="svgIcon" data-svgicon-id="align-justify"></div>
+            </div>
+            <div class="description">
+                <p>Simple and lightweight script to load SVG icons from a single iconpack directly into the DOM.</p>
+                <p>
+                    All you have to do is to call the <code>SVGIconsLoader(iconPack[s])</code> function and specify
+                    the icon id directly in the HTML element you want the icon to be loaded in. You can do this by
+                    setting the <code>data-svgicon-id</code>.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
