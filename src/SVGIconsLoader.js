@@ -41,7 +41,11 @@ function SVGIconsLoader(iconPack) {
             $element.find("svg").remove();
             
             //get viewBox from iconPack svg container
-            var viewBox = $IconsContainer.find("#"+$element.attr("data-svgicon-id")).parents("svg")[0].getAttributeNS(null,"viewBox");
+            var $ico = $IconsContainer.find("#"+$element.attr("data-svgicon-id"));
+            if($ico.length === 0) {
+                return true; //skip iteration
+            }
+            var viewBox = $ico.parents("svg")[0].getAttributeNS(null,"viewBox");
             
             //create <svg> element inside the icon container
             var svgElem = document.createElementNS(SVGNS, "svg");

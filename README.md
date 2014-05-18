@@ -1,4 +1,4 @@
 SVGIconLoader
 =============
 
-Checkout the demo.html file
+Checkout the demo.html
