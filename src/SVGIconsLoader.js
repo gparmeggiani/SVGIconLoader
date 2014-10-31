@@ -24,7 +24,7 @@ function SVGIconsLoader(iconPack) {
     function setup() {
         //load the container for icons packs OR create a new one if it doesn't exist
         $IconsContainer = $(".icons-definition-container");
-        if(!$IconsContainer.lenght) {
+        if(!$IconsContainer.length) {
             $IconsContainer = $("<div>");
             $IconsContainer.addClass("icons-definition-container");
             $("body").first().prepend($IconsContainer);
@@ -68,7 +68,8 @@ function SVGIconsLoader(iconPack) {
                 });
             }
         } else if(typeof iconPack === 'string' || iconPack instanceof String) {
-            $IconsContainer.load(iconPack, function(){
+            var $pack = $("<div>").load(iconPack, function(){
+                $IconsContainer.append($pack.first());
                 render();
             });
         }
